@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &527774564356283081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5885765164262208358}
+  - component: {fileID: 2286733673605645434}
+  m_Layer: 9
+  m_Name: AIShipMovementControls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5885765164262208358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527774564356283081}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3095486249491412207}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2286733673605645434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527774564356283081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad44636b7fc99264da9209b1644ea606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AIShipMovementControls
+  _target: {fileID: 0}
+  _enableYaw: 1
+  _yawPidController:
+    _proportionalGain: 0.5
+    _integralGain: 0
+    _derivativeGain: 0.1
+    _minOutput: -1
+    _maxOutput: 1
+    _integralSaturation: 0
+    _derivativeMeasurement: 0
+    _enablePid: 1
+    _lastValue: 0
+    _lastError: 0
+    _integrationStored: 0
+    _velocity: 0
+  _enablePitch: 1
+  _pitchPidController:
+    _proportionalGain: 0.5
+    _integralGain: 0
+    _derivativeGain: 0.1
+    _minOutput: -1
+    _maxOutput: 1
+    _integralSaturation: 0
+    _derivativeMeasurement: 0
+    _enablePid: 1
+    _lastValue: 0
+    _lastError: 0
+    _integrationStored: 0
+    _velocity: 0
+  _localDirection: {x: 0, y: 0, z: 0}
+  _distanceToTarget: 0
+  _pitch: 0
+  _yaw: 0
+  _thrustAmount: 0
+--- !u!1 &2856297654157455990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3095486249491412207}
+  - component: {fileID: 1702463572386172192}
+  m_Layer: 9
+  m_Name: CollisionAvoidance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3095486249491412207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856297654157455990}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5885765164262208358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1702463572386172192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856297654157455990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dd0c69948091f41b67c667647f5c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionAvoidance
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _topProbe: {fileID: 0}
+  _bottomProbe: {fileID: 0}
+  _leftProbes: []
+  _rightProbes: []
+  _detectionRange: 100
+  _displayRays: 0
+  _verticalCollision: 
+  _horizontalCollision: 
